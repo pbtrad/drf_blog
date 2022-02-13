@@ -26,7 +26,7 @@ class Post(models.Model):
     content = models.TextField()
     slug = models.SlugField(max_length=250, unique_for_date='published')
     published = models.DateTimeField(default=timezone.now)
-    auther = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     status = models.CharField(max_length=10, choices=options, default='published')
     objects = models.Manager()
     postobjects = PostObjects()
