@@ -31,7 +31,7 @@ class PostTests(APITestCase):
 
         client = APIClient()
 
-        self.test_category = Category.objects.create(name='django')
+        self.test_category = Category.objects.create(name='rock')
         self.testuser1 = User.objects.create_user(
             username='test_user1', password='123456789')
         self.testuser2 = User.objects.create_user(
